@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tables</title>
+        <link href='style.css' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+        <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    </head>
+    <body>
+        <div class='main-container'>
+            <div class='rtr-cost'>
+                <div class="rtr-cost-title">
+                    Reduce to the Ridiculous<br><span>Efficiency Gain or Loss</span>
+                </div>
+                <div class="form-container">
+                    <div class='rtr-fillable'>
+                        <label>Total Software Users</label>
+                        <input type='text' id='total-users'>
+                        <label>Total Software Investment</label>
+                        <input type='text' id='payment-total'>
+                        <label>Timeframe</label>
+                        <input type='text' id='payment-length'>
+                        <label>Average Hourly Wage of FTE</label>
+                        <input type='text' id='fte'>
+                    </div>
+                    <div class='rtr-readonly'>
+                        <label>Daily Cost</label>
+                        <input type='text' class='readonly' id='daily-spend' readonly="readonly">
+                        <label>Hourly Cost</label>
+                        <input type='text' class='readonly' id='hourly-spend' readonly="readonly">
+                        <label>Software Hourly Cost</label>
+                        <input type='text' id='hourly-increase' class='readonly' readonly="readonly"> 
+                        <label>Efficiency Gains Per Employee</label>
+                        <input type='text' class='readonly' id='efficiency' readonly="readonly">
+                    </div>
+
+
+                    
+
+                </div>
+                <div class='slider'>
+                    <label>Expected Efficiency Gain (Industry Average is 27%)</label>
+                    <input type='range' id='slider' min="0" max="100" value="10">
+                    <input type='text' id='slider-value' readonly="readonly">
+                </div>
+                <div class="rtr-cost-outcome"> 
+                    <div class='rtr-cost-outcome-card'>
+                        <label>Profitable Operating Efficiency Gain <br>(Per Hour Per Employee)</label>
+                        <input type='text' id='profitable-gain' readonly="readonly">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+   
+    <script src='script.js' type='text/javascript'></script>
+    </body>
+</html>
