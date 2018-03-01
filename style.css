@@ -36,6 +36,8 @@ body {
     background: linear-gradient(#f2994a, #f2c94c);
     text-align: center;
     font-size: 2em;
+    font-weight: 700;
+    color: white;
 }
 
 .rtr-cost-title span {
