@@ -52,7 +52,7 @@ function calculateValues() {
 
         if(fteSavings.value > 10000) {  
                 outcomeCardROI.style.background = "linear-gradient(#1d976c, #93f9b9)";
-        } else if(gain.value < 0) {
+        } else if(fteSavings.value < 0) {
                 outcomeCardROI.style.background = "linear-gradient(to right, #e52d27, #b31217)";
         } else {
                 outcomeCardROI.style.background = 'linear-gradient(#f2994a, #f2c94c)';
@@ -60,7 +60,7 @@ function calculateValues() {
 
         if(efficiencyGains.value > 10000) {  
                 outcomeCardEfficiency.style.background = "linear-gradient(#1d976c, #93f9b9)";
-        } else if(gain.value < 0) {
+        } else if(efficiencyGains.value < 0) {
                 outcomeCardEfficiency.style.background = "linear-gradient(to right, #e52d27, #b31217)";
         } else {
                 outcomeCardEfficiency.style.background = 'linear-gradient(#f2994a, #f2c94c)';
