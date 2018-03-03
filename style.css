@@ -33,7 +33,9 @@ body {
 /* RTR Cost */
 
 .rtr-cost-title {
-    background: linear-gradient(#f2994a, #f2c94c);
+    background: linear-gradient(to top, #2980b9, #2c3e50);;
+    color: white;
+    font-weight: 700;
     text-align: center;
     font-size: 2em;
 }
@@ -80,41 +82,46 @@ input {
 
 .rtr-cost-outcome {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     text-align: center;
     height: 20%;
-    margin-top: 2%;
+    margin-top: 2%; 
 }
 
-.rtr-cost-outcome-card {
+.rtr-cost-outcome-card, .rtr-roi-outcome-card-2, .rtr-roi-outcome-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 30%;
     height: 80%;
-    background: linear-gradient(#f2994a, #f2c94c);
+    background: linear-gradient(45deg, #f2994a, #f2c94c);
     box-shadow: 1px 1px 4px #EBEBEB;
     -moz-box-shadow: 1px 1px 4px #EBEBEB;
     -webkit-box-shadow: 1px 1px 4px #EBEBEB;
     border-radius: 3px;
+    color: white;
+    font-weight: 700;
+    margin: 0 1% 0 1%;
     
 }
 
 .rtr-cost-outcome-card label {
-    width: 90%;
+    width: 95%;
 }
 
-#profitable-gain {
+#profitable-gain, #fte-savings, #efficiency-gains {
     border: none;
     border-radius: 5px;
     height: 50px;
     width: 50%;
     background: none;
     margin-bottom: 10px;
+    color: white;
+    font-weight: 700;
 }
 
 

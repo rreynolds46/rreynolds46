@@ -12,7 +12,7 @@
         <div class='main-container'>
             <div class='rtr-cost'>
                 <div class="rtr-cost-title">
-                    Reduce to the Ridiculous<br><span>Efficiency Gain or Loss</span>
+                    Reduce to the Ridiculous<br><span>Calculator</span>
                 </div>
                 <div class="form-container">
                     <div class='rtr-fillable'>
@@ -20,7 +20,7 @@
                         <input type='text' id='total-users'>
                         <label>Total Software Investment</label>
                         <input type='text' id='payment-total'>
-                        <label>Timeframe</label>
+                        <label>Timeframe (Years)</label>
                         <input type='text' id='payment-length'>
                         <label>Average Hourly Wage of FTE</label>
                         <input type='text' id='fte'>
@@ -47,8 +47,16 @@
                 </div>
                 <div class="rtr-cost-outcome"> 
                     <div class='rtr-cost-outcome-card'>
-                        <label>Profitable Operating Efficiency Gain <br>(Per Hour Per Employee)</label>
+                        <label>Efficiency Gain<br>(Per Hour Per Employee)</label>
                         <input type='text' id='profitable-gain' readonly="readonly">
+                    </div>
+                    <div class='rtr-roi-outcome-card-2'>
+                        <label>Efficiency Gain<br>(Over Timeframe)</label>
+                        <input type='text' id='efficiency-gains' readonly="readonly">
+                    </div>
+                    <div class='rtr-roi-outcome-card'>
+                        <label>Savings Over New FTE<br>(Over Timeframe)</label>
+                        <input type='text' id='fte-savings' readonly="readonly">
                     </div>
                 </div>
             </div>

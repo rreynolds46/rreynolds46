@@ -8,12 +8,14 @@ const efficiency = document.querySelector('#efficiency');
 const hourlyIncrease = document.querySelector('#hourly-increase');
 const inputs = document.querySelectorAll('input');
 const fte = document.querySelector('#fte');
+const fteSavings = document.querySelector('#fte-savings')
 const gain = document.querySelector('#profitable-gain');
+const efficiencyGains = document.querySelector('#efficiency-gains');
 const slider = document.querySelector('#slider');
 const sliderValue = document.querySelector('#slider-value');
 const outcomeCard = document.querySelector('.rtr-cost-outcome-card');
-
-var prefixes = ['-o-', '-ms-', '-moz-', '-webkit-'];
+const outcomeCardROI = document.querySelector('.rtr-roi-outcome-card');
+const outcomeCardEfficiency = document.querySelector('.rtr-roi-outcome-card-2');
 
 slider.value = 10;
 sliderValue.value = 10 + "%";
@@ -35,13 +37,34 @@ function calculateValues() {
     gain.value = isFinite(+gain.value) ? gain.value : "";
     sliderValue.value = slider.value + "%";
 
-    if(gain.value > .5) {  
-            outcomeCard.style.background = "linear-gradient(#1d976c, #93f9b9)";
-    } else if(gain.value < 0) {
-            outcomeCard.style.background = "linear-gradient(#ef3b36, #ffffff)";
-    } else {
-            outcomeCard.style.background = 'linear-gradient(#f2994a, #f2c94c)';
-    }
+    fteSavings.value = (fte.value * 8 * 260 * paymentLength.value) - (hourlySpend.value * 8 * 260 * paymentLength.value);
+    fteSavings.value = isFinite(+fteSavings.value) ? parseInt(fteSavings.value).toFixed(0) : "";
+    efficiencyGains.value = gain.value * 8 * 260 * paymentLength.value * totalUsers.value;
+    efficiencyGains.value = isFinite(+efficiencyGains.value) ? parseInt(efficiencyGains.value).toFixed(0) : "";
+
+        if(gain.value > .5) {  
+                outcomeCard.style.background = "linear-gradient(#1d976c, #93f9b9)";
+        } else if(gain.value < 0) {
+                outcomeCard.style.background = "linear-gradient(to right, #e52d27, #b31217)";
+        } else {
+                outcomeCard.style.background = 'linear-gradient(#f2994a, #f2c94c)';
+        }
+
+        if(fteSavings.value > 10000) {  
+                outcomeCardROI.style.background = "linear-gradient(#1d976c, #93f9b9)";
+        } else if(gain.value < 0) {
+                outcomeCardROI.style.background = "linear-gradient(to right, #e52d27, #b31217)";
+        } else {
+                outcomeCardROI.style.background = 'linear-gradient(#f2994a, #f2c94c)';
+        }
+
+        if(efficiencyGains.value > 10000) {  
+                outcomeCardEfficiency.style.background = "linear-gradient(#1d976c, #93f9b9)";
+        } else if(gain.value < 0) {
+                outcomeCardEfficiency.style.background = "linear-gradient(to right, #e52d27, #b31217)";
+        } else {
+                outcomeCardEfficiency.style.background = 'linear-gradient(#f2994a, #f2c94c)';
+        }
 }
 
 
